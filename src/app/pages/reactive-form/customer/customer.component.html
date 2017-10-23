@@ -1,0 +1,70 @@
+<p>
+  customer works!
+</p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Customer</h3>
+  </div>
+  <div class="panel-body">
+
+      <form (ngSubmit)="onSubmit()" [formGroup]="customerForm" >
+          <div class="form-group"
+           [ngClass]="{'has-error': (customerForm.get('firstName').touched || customerForm.get('firstName').dirty ) }"
+          >
+            <label for="firstNameId">First Name</label>
+            <input 
+              id="firstNameId"
+              type="text" 
+              class="form-control"  
+              formControlName="firstName"  
+              placeholder="First Name">
+
+              <span class="help-block" *ngIf="(customerForm.get('firstName').touched || customerForm.get('firstName').dirty)" >
+                <span *ngIf="customerForm.get('firstName').errors.required">
+                    required
+                </span>
+
+              </span>
+
+          </div>
+
+
+          <div class="form-group"
+          [ngClass]="{'has-error': (customerForm.get('lastName').touched || customerForm.get('lastName').dirty ) }"
+         >
+           <label for="lastNameId">last Name</label>
+           <input 
+             id="lastNameId"
+             type="text" 
+             class="form-control"  
+             formControlName="lastName"  
+             placeholder="last Name">
+
+             <span class="help-block" *ngIf="(customerForm.get('lastName').touched || customerForm.get('lastName').dirty)" >
+               <!-- <span *ngIf="customerForm.get('lastName').errors.required">
+                   required
+               </span> -->
+               <span *ngIf="customerForm.get('lastName').errors.minlength">
+                   Min Length 2 
+               </span>
+
+             </span>
+
+         </div>
+
+          <button type="submit"
+            [disabled]="!customerForm.valid" 
+            class="btn btn-default">Submit</button>
+        </form>
+
+      <br>Dirty
+      <br>
+      <br>
+      <br>
+      <br>
+
+
+
+  </div>
+</div>

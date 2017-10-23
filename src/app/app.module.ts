@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ModalModule } from './pages/modal/modal.module';
+import { ReactiveFormModule } from './pages/reactive-form/reactive-form.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ModalModule } from './pages/modal/modal.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormModule,
     ModalModule
   ],
   providers: [],
