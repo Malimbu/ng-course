@@ -1,0 +1,17 @@
+<div class="row">
+  <!-- <div class="row"> -->
+      <div class="page-header">
+          <h1>Template Form</h1>
+        </div>
+  <!-- </div> -->
+  <div class="col-md-3">
+    <div class="list-group">
+      <a [routerLink]="[ '/template-form/customer' ]" routerLinkActive="active" class="list-group-item">Customer <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span></a>
+      <!-- <a [routerLink]="[ '/reactive-form/validation-customer' ]" routerLinkActive="active" class="list-group-item">Customer - Validate <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span></a> -->
+    </div> 
+    
+  </div>
+  <div class="col-md-9">
+    <router-outlet></router-outlet>    
+  </div>
+</div>

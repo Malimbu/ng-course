@@ -16,17 +16,14 @@ export class ValidationCustomerComponent implements OnInit {
   ngOnInit(): void {
     this.customerForm = this.fb.group({
       firstName: ['', Validators.required],
-      lastName: ['', [Validators.required, Validators.minLength(3)  ]]
-      // lastName: ['', Validators.minLength(3) ],
-      
-      // lastName: ['', [ Validators.minLength(3)  ]]
-      // email: ['', Validators.required, Validators.email],
-      // sendCatalog: true
+      lastName: ['', [Validators.required, Validators.minLength(3)  ]],
+      email: ['', [Validators.required, Validators.email]],
+      sendCatalog: true
     })
 
   }
 
-  get getLastName(){
+  get lastName(){
     return this.customerForm.get('lastName') ;
   }
 

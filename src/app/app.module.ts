@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ModalModule } from './pages/modal/modal.module';
 import { ReactiveFormModule } from './pages/reactive-form/reactive-form.module';
+import { TemplateFormModule } from './pages/template-form/template-form.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormModule } from './pages/reactive-form/reactive-form.module';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormModule,
-    ModalModule
+    ModalModule,
+    TemplateFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
