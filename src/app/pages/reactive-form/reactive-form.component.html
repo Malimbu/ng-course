@@ -1,17 +1,18 @@
-<!-- <div class="starter-template"> -->
-<div class="col-md-3">
-    <div class="panel panel-default">
-        <div class="panel-heading">Reactive Sample</div>
-        <div class="list-group">
-          <a [routerLink]="['/reactive-form']" class="list-group-item">
-            Customer
-          </a>
-          <a href="#" class="list-group-item">Data Model</a>
+<div class="row">
+  <!-- <div class="row"> -->
+      <div class="page-header">
+          <h1>Firebase ng-app</h1>
         </div>
-      </div>
+  <!-- </div> -->
+  <div class="col-md-3">
+    <div class="list-group">
+      <a [routerLink]="[ '/reactive-form/customer' ]" routerLinkActive="active" class="list-group-item">Customer <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span></a>
+      <a [routerLink]="[ '/reactive-form/validation-customer' ]" routerLinkActive="active" class="list-group-item">Customer - Validate <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span></a>
+      <a [routerLink]="[ '/reactive-form/data-customer' ]" routerLinkActive="active" class="list-group-item">Customer - Data <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span></a>
+    </div> 
     
-</div>  
-
-<div class="col-md-9">
-  <router-outlet></router-outlet>
+  </div>
+  <div class="col-md-9">
+    <router-outlet></router-outlet>    
+  </div>
 </div>
