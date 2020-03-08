@@ -1,3 +1,3 @@
 <?php
-  echo "Tes Page";
+  echo "Tes Page 2";
 ?>
