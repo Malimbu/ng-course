@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/u8329298/public_html/demo/github
+    - export DEPLOYPATH=/home/u8329298/public_html/demo/github/
     - /bin/cp index.php $DEPLOYPATH
